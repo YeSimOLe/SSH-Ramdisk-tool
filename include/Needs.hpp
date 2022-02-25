@@ -20,6 +20,7 @@ namespace Apple {
   int Needs(){
 
     std::cout << "[i] Quick dependency check first.." << '\n';
+    sleep(1);
 
     std::ifstream img4("/usr/local/bin/img4");
     if(!img4){
@@ -79,6 +80,7 @@ namespace Apple {
       system("chmod +x /usr/local/bin/pzb && rm -rf buildroot_macos-latest.zip && rm -rf buildroot_macos-latest");
     }
     std::cout << "[i] Done!" << '\n';
+    system("clear");
   return 0;
 }
 };

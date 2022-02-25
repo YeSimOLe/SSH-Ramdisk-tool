@@ -18,6 +18,9 @@ std::string input1, input2;
 
 namespace Apple {
   int Needs(){
+
+    std::cout << "[i] Quick dependency check first.." << '\n';
+
     std::ifstream img4("/usr/local/bin/img4");
     if(!img4){
       std::cout << "[i] Img4 not found. Installing it for you.." << '\n';
@@ -26,6 +29,7 @@ namespace Apple {
       chdir("img4lib-2020-10-27/apple");
       system("cp -v img4 /usr/local/bin");
       chdir("../..");
+      system("chmod +x /usr/local/bin/img4");
       system("rm -rf img4lib-2020-10-27 && rm -rf img4lib-2020-10-27.tar.gz");
     }
     std::ifstream img4tool("/usr/local/bin/img4tool");
@@ -36,6 +40,7 @@ namespace Apple {
       chdir("buildroot_macos-latest");
       system("rsync --ignore-existing -avhuK ./usr \"/\"");
       chdir("..");
+      system("chmod +x /usr/local/bin/img4tool");
       system("rm -rf buildroot_macos-latest.zip && rm -rf buildroot_macos-latest");
     }
     std::ifstream kpatcher("/usr/local/bin/Kernel64Patcher");
@@ -73,6 +78,7 @@ namespace Apple {
       chdir("../../../..");
       system("chmod +x /usr/local/bin/pzb && rm -rf buildroot_macos-latest.zip && rm -rf buildroot_macos-latest");
     }
+    std::cout << "[i] Done!" << '\n';
   return 0;
 }
 };

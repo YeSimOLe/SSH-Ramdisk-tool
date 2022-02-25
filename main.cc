@@ -2,6 +2,9 @@
 #include "include/Needs.hpp"
 #include "include/Components.hpp"
 
+int main(int argc, char **argv){
+ 
+ 
 #if defined(__APPLE__) && defined(__MACH__)
 Apple::Needs(); // dependency check apple
 
@@ -9,8 +12,7 @@ Apple::Needs(); // dependency check apple
 linux::Needs(); // linux dependency
 
 #endif
-
-int main(int argc, char **argv){
+ 
  if(argc < 2){
   std::cout << "Example: " << argv[0] << " -d iPad7,5 -i 14.5.1 -b j71bap -s bla/blob.shsh2" << std::endl;
    return -1;

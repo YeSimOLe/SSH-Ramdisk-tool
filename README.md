@@ -4,6 +4,9 @@ An ssh ramdisk tool that lets you boot the restoreramdisk for your specified ios
 
 ```
 For this to work you need macOS catalina and higher, and  xcode installed!!!
+
+I tried linux but unfortunately kernel64patcher uses a library that is only found in mac. So it doesn't work on linux.
+
 ```
 Compiling:
 ```c++

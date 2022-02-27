@@ -89,7 +89,7 @@ sleep(1);
 
 std::cout << RED << load::Time() << RESET << " [5] Decrypting & Patching iBEC.." << RESET << std::endl; // 'RED' and 'RESET' s definition is located in "Needs.hpp"
 system((std::string("img4 -i ") + load::ibec.name + " -o ibec.raw -k " + load::iBECIV() + load::iBECKEY()).c_str());
-system("kairos ibec.raw ibec.pwn -b \"rd=md0 -restore -v\"");
+system("kairos ibec.raw ibec.pwn -b \"rd=md0 -restore serial=3 -v\"");
 system("img4 -i ibec.pwn -o iBEC.img4 -M IM4M -A -T ibec");
 std::cout << "[!] Done!" << std::endl << std::endl;
 sleep(1);

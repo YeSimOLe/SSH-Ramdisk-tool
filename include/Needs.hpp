@@ -85,8 +85,4 @@ namespace Apple {
 }
 };
 
-namespace linux {
-
-};
-
 #endif

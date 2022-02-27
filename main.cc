@@ -4,15 +4,6 @@
 
 int main(int argc, char **argv){
  
- 
-#if defined(__APPLE__) && defined(__MACH__)
-Apple::Needs(); // dependency check apple
-
-#elif defined(__linux__)
-linux::Needs(); // linux dependency
-
-#endif
- 
  if(argc < 2){
   std::cout << "Example: " << argv[0] << " -d iPad7,5 -i 14.5.1 -b j71bap -s bla/blob.shsh2" << std::endl;
    return -1;
@@ -38,6 +29,9 @@ linux::Needs(); // linux dependency
      return -1;
    }
  }
+ 
+Apple::Needs(); // dependency check apple
+ 
 std::ifstream dirchk((std::string("Patched") + "_" + version + "/ramdisk").c_str());
 if(dirchk){
   std::cout << "[i] Patched dir already exists. Going straight to booting.." << std::endl;

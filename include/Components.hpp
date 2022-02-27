@@ -397,7 +397,7 @@ int Help() {
   std::cout << "\t-d <identifier>" << std::endl;
   std::cout << "\t-i <version>" << std::endl;
   std::cout << "\t-b <board>" << std::endl;
-  std::cout << "\t-e <ecid>" << std::endl;
+  std::cout << "\t-s <blob>" << std::endl;
   return 0;
 }
 
